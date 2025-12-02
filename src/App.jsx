@@ -583,7 +583,7 @@ export default function App() {
             <div>
               <div className="flex items-center space-x-2">
                 <span className="text-lg font-semibold tracking-wide">
-                  弦中弦 AI 业绩生成器
+                  强中强 AI 业绩生成器
                 </span>
                 <span className="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-300 text-[11px] border border-emerald-500/40">
                   门店老板专用
@@ -607,10 +607,10 @@ export default function App() {
         </div>
       </header>
 
-      {/* 主体：左窄右宽 */}
-      <main className="max-w-7xl mx-auto px-4 py-6 grid grid-cols-1 lg:grid-cols-[360px_minmax(0,1fr)] gap-6">
+      {/* 主体：小屏 1 列，大屏左 1 右 2 列 */}
+      <main className="max-w-7xl mx-auto px-4 py-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* 左侧配置区 */}
-        <section className="space-y-4">
+        <section className="space-y-4 lg:col-span-1">
           {/* 顶部三个数字块 */}
           <div className="grid grid-cols-3 gap-2">
             <MetricBox label="新客占比" value="100" unit="%" />
@@ -950,7 +950,7 @@ export default function App() {
         </section>
 
         {/* 右侧结果区 */}
-        <section className="space-y-4">
+        <section className="space-y-4 lg:col-span-2">
           <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 shadow-lg shadow-slate-900/40 min-h-[280px]">
             {!result ? (
               <div className="h-full flex flex-col items-center justify-center text-center text-slate-500 text-sm space-y-2">
