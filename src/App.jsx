@@ -375,4 +375,4 @@ ${goalInfo}
                     私教课目标节数
                   </label>
                   <input
-                    className="w-full rounded-lg border border-slate-700 bg-slate-900/80 px-2 py-1.5 text-xs outline-none focus:border-emer
+                    className="w-full rounded-lg border border-slate-700 bg-slate-900/80 px-2 py-1.5 text-xs outline-none focus:border-emerald-400 focus:ring
