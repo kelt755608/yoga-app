@@ -290,89 +290,10 @@ ${goalInfo}
           </div>
 
           <hr className="border-slate-800/80" />
+        </section>
+      </main>
+    </div>
+  );
+}
 
-          {/* 模块 2 本月业绩目标 */}
-          <div>
-            <h2 className="flex items-center gap-2 text-sm font-semibold text-slate-200">
-              <Target className="h-4 w-4 text-emerald-400" />
-              2. 本月业绩目标
-            </h2>
-            <p className="mt-1 text-xs text-slate-400">
-              用于自动生成「数字清晰的目标描述」和成交话术中的目标感。
-            </p>
-
-            <div className="mt-3 space-y-2">
-              <div className="space-y-1">
-                <label className="text-xs text-slate-300">
-                  本月总业绩目标（元）
-                </label>
-                <input
-                  className="w-full rounded-lg border border-slate-700 bg-slate-900/80 px-3 py-1.5 text-xs outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-500/50"
-                  value={monthlyTarget}
-                  onChange={(e) => setMonthlyTarget(e.target.value)}
-                />
-              </div>
-
-              <div className="space-y-1">
-                <label className="text-xs text-slate-300">
-                  主推卡型价格带（例如：2000-6000元）
-                </label>
-                <input
-                  className="w-full rounded-lg border border-slate-700 bg-slate-900/80 px-3 py-1.5 text-xs outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-500/50"
-                  value={cardPriceRange}
-                  onChange={(e) => setCardPriceRange(e.target.value)}
-                />
-              </div>
-
-              <div className="space-y-1">
-                <label className="text-xs text-slate-300">
-                  本月重点业务 / 客群（可多选）
-                </label>
-                <div className="flex flex-wrap gap-1.5">
-                  {TAG_OPTIONS.map((tag) => {
-                    const active = focusTags.includes(tag);
-                    return (
-                      <button
-                        key={tag}
-                        type="button"
-                        onClick={() => toggleTag(tag)}
-                        className={`rounded-full border px-2.5 py-0.5 text-[11px] transition ${
-                          active
-                            ? "border-emerald-400 bg-emerald-500/15 text-emerald-200"
-                            : "border-slate-700 bg-slate-900/80 text-slate-300 hover:border-emerald-400/70 hover:text-emerald-200"
-                        }`}
-                      >
-                        {tag}
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-
-              <div className="grid grid-cols-3 gap-2">
-                <div className="space-y-1">
-                  <label className="text-xs text-slate-300">
-                    小班课目标人次
-                  </label>
-                  <input
-                    className="w-full rounded-lg border border-slate-700 bg-slate-900/80 px-2 py-1.5 text-xs outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-500/50"
-                    value={smallClassTarget}
-                    onChange={(e) => setSmallClassTarget(e.target.value)}
-                  />
-                </div>
-                <div className="space-y-1">
-                  <label className="text-xs text-slate-300">
-                    体验课目标人次
-                  </label>
-                  <input
-                    className="w-full rounded-lg border border-slate-700 bg-slate-900/80 px-2 py-1.5 text-xs outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-500/50"
-                    value={trialTarget}
-                    onChange={(e) => setTrialTarget(e.target.value)}
-                  />
-                </div>
-                <div className="space-y-1">
-                  <label className="text-xs text-slate-300">
-                    私教课目标节数
-                  </label>
-                  <input
-                    className="w-full rounded-lg border border-slate-700 bg-slate-900/80 px-2 py-1.5 text-xs outline-none focus:border-emerald-400 focus:ring
+export default App;
